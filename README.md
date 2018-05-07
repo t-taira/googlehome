@@ -21,3 +21,10 @@ npm --version
 npm install
 node main.js
 ```
+
+### Fix
+- https://github.com/noelportugal/google-home-notifier/blob/master/README.md#after-npm-install
+- main.js
+```
+googlehome.device('Google-Home-xxx', language); // Change to your Google Home name
+```
