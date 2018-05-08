@@ -28,3 +28,6 @@ node main.js
 ```
 googlehome.device('Google-Home-xxx', language); // Change to your Google Home name
 ```
+
+### Daemonize
+- https://github.com/foreverjs/forever

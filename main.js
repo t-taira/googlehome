@@ -1,7 +1,7 @@
 // see. https://github.com/noelportugal/google-home-notifier
 const googlehome = require('google-home-notifier');
 const language = 'ja';
-googlehome.device('Google-Home-xxx', language);
+googlehome.device(process.env.GOOGLE_HOME, language);
 
 const cron = require('node-cron');
 cron.schedule('20 5 * * *', function(){
@@ -28,6 +28,13 @@ cron.schedule('0 12 * * *', function(){
 cron.schedule('0 19 * * *', function(){
   console.log('夜ご飯の時間です')
   googlehome.notify('夜ご飯の時間です', function(res) {
+    console.log(res);
+  });
+});
+
+cron.schedule('45 21 * * *', function(){
+  console.log('お風呂を入れて下さい')
+  googlehome.notify('お風呂を入れて下さい', function(res) {
     console.log(res);
   });
 });
